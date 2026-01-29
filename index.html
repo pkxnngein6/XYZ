@@ -1,11 +1,236 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>เว็บกูมาแล้ว</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Panel</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+.panel {
+  max-width: 400px;
+  margin: 40px auto;
+  background: rgba(0,0,0,0.6);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.card {
+  background: #111;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00ffff, #00ff99);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+</style>
 </head>
+
 <body>
-  <h1>HELLO NETLIFY 🔥</h1>
-  <p>ถ้าเห็นอันนี้ แปลว่าสำเร็จ</p>
+
+<div class="panel">
+  <h2>⚡Panel</h2>
+
+  <div class="card">
+    <label> ดูดหัว</label>
+    <input type="range" min="0" max="100">
+  </div>
+
+  <div class="card">
+    <label> ช่วยลาก</label>
+    <input type="range" min="0" max="100">
+  </div>
+
+  <div class="card">
+    <label> ลากหัว</label>
+    <input type="range" min="0" max="100">
+  </div>
+
+  <button>บันทึกค่า</button>
+</div>
+
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Control Panel</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+.panel {
+  max-width: 420px;
+  margin: 40px auto;
+  background: rgba(0,0,0,0.6);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+h2 {
+  text-align: center;
+  color: #00ffff;
+}
+
+.card {
+  background: #111;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00ffff, #00ff99);
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+  <h2>🧑‍🎄 Master Panel</h2>
+
+  <audio id="music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+  <div class="card">
+    <button onclick="playMusic()">▶ เปิดพาแนล (สำคัญ)</button>
+    <button onclick="pauseMusic()">⏸ หยุดพาแนล</button>
+  </div>
+
+  <div class="card">
+    <label>🔊 Volume</label>
+    <input type="range" min="0" max="100" value="50" oninput="setVolume(this.value)">
+  </div>
+</div>
+
+<script>
+const music = document.getElementById("music");
+
+function playMusic() {
+  music.play();
+}
+
+function pauseMusic() {
+  music.pause();
+}
+
+function setVolume(val) {
+  music.volume = val / 100;
+}
+</script>
+
+</body>
+</html>
+
+<div class="card">
+  <a href="https://discord.gg/JEwrdKPGBA" target="_blank" class="discord-btn">
+    💬 เข้าร่วม Discord
+  </a>
+</div>
+
+<a href="https://www.youtube.com/@XS999FF" target="_blank"
+   style="
+     display:block;
+     text-align:center;
+     padding:14px;
+     border-radius:12px;
+     text-decoration:none;
+     font-weight:bold;
+     color:white;
+     background:linear-gradient(90deg,#ff0000,#cc0000);
+     box-shadow:0 0 15px rgba(255,0,0,0.7);
+   ">
+  ▶ เข้า YouTube XS999FF
+</a>
+
+<a href="https://master.osnvc.xyz/" target="_blank"
+   style="
+     display:block;
+     text-align:center;
+     padding:14px;
+     border-radius:12px;
+     text-decoration:none;
+     font-weight:bold;
+     color:white;
+     background:linear-gradient(90deg,#00ffa2,#00cfff);
+     box-shadow:0 0 15px rgba(0,255,200,0.7);
+   ">
+  🌐 เข้าเว็บไซต์ Master
+</a>
+
+<a href="https://vipmodz.zxrv.xyz/?page=home" target="_blank"
+   style="
+     display:block;
+     text-align:center;
+     padding:14px;
+     border-radius:12px;
+     text-decoration:none;
+     font-weight:bold;
+     color:white;
+     background:linear-gradient(90deg,#7f00ff,#e100ff);
+     box-shadow:0 0 15px rgba(200,0,255,0.7);
+   ">
+  🚀 เข้า VIP MODZ
+    </a>
+    
