@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORKME X STORE</title>
+
+<style>
+body{
+    background:#0b0b0f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, sans-serif;
+}
+
+.panel{
+    width:700px;
+    background:#111;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 40px #8a2be2;
+    color:white;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#b56cff;
+    font-weight:bold;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.close{
+    cursor:pointer;
+    font-size:20px;
+}
+
+.container{
+    display:flex;
+    justify-content:space-between;
+}
+
+.left{
+    width:45%;
+}
+
+.left h2{
+    color:#b56cff;
+    letter-spacing:5px;
+}
+
+.option{
+    margin:10px 0;
+    display:flex;
+    align-items:center;
+}
+
+.option input{
+    margin-right:10px;
+    width:18px;
+    height:18px;
+}
+
+.right{
+    width:45%;
+}
+
+.slider-group{
+    margin-bottom:20px;
+}
+
+input[type=range]{
+    width:100%;
+    accent-color:#b56cff;
+}
+
+.status{
+    margin-top:15px;
+    font-size:14px;
+    color:#ccc;
+}
+
+.smooth{
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="panel">
+    <div class="header">
+        WORKME X STORE
+        <div class="close">✕</div>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <h2>W O R K X</h2>
+
+            <div class="option"><input type="checkbox"> ดูดหัว 88%</div>
+            <div class="option"><input type="checkbox"> ช่วยลากหัวง่ายขึ้น</div>
+            <div class="option"><input type="checkbox"> กระสุนตรง</div>
+            <div class="option"><input type="checkbox"> กันแบน</div>
+            <div class="option"><input type="checkbox"> กันรายงาน</div>
+            <div class="option"><input type="checkbox"> กันดำ</div>
+
+            <div class="smooth">
+                <label>Smooth: <span id="smoothValue">50</span></label>
+                <input type="range" min="0" max="100" value="50" id="smoothSlider">
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="slider-group">
+                <label>AIMBOT</label>
+                <input type="range" min="0" max="100" value="60">
+            </div>
+
+            <div class="slider-group">
+                <label>DPI 4990</label>
+                <input type="range" min="1000" max="6000" value="4990">
+            </div>
+
+            <div class="status">
+                Status : <span style="color:#00ff88;">Online</span><br>
+                Volume : 13%
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const smoothSlider = document.getElementById("smoothSlider");
+const smoothValue = document.getElementById("smoothValue");
+
+smoothSlider.addEventListener("input", function(){
+    smoothValue.innerText = this.value;
+});
+</script>
+
+</body>
+</html>
